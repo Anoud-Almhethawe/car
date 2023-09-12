@@ -21,6 +21,7 @@ const Hero = () => {
           containerStyle="bg-primary-blue text-white mt-10 rounded-full"
           handleClick={handleScroll}
           btnType={"button"}
+          rightIcon={""}
         />
       </div>
       <div className="hero__image-container">
