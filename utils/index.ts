@@ -1,3 +1,4 @@
+import { type } from "os";
 import { manufacturers } from "./../constance/index";
 import { CarProps, FilterProps } from "@/types";
 
@@ -46,5 +47,14 @@ export const updateSearchParams = (type: string, value: string) => {
 
   searchParams.set(type, value);
   const newPathname = `${window.location.pathname}?${searchParams.toString()}`;
+  return newPathname;
+};
+
+export const deleteSearchParams = (type: string) => {
+  const newSearchParams = new URLSearchParams(window.location.search);
+  newSearchParams.delete(type.toLocaleLowerCase());
+  const newPathname = `${
+    window.location.pathname
+  }?${newSearchParams.toString()}`;
   return newPathname;
 };

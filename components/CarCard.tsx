@@ -23,7 +23,7 @@ const CarCard = ({ car }: CarCardProps) => {
 
       <p className="flex my-6 text-[32px] font-extrabold">
         <span className="self-start text-[14px] font-semibold">$</span>
-        {carRent}
+        {carRent.toFixed(2)}
         <span className="self-end text-[14px] font-medium">/day</span>
       </p>
 
