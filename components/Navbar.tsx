@@ -18,6 +18,7 @@ const Navbar = () => {
           title="Sign In"
           btnType="button"
           containerStyle="text-primary-blue rounded-full bg-white min-w-[130px]"
+          rightIcon={""}
         />
       </nav>
     </header>
