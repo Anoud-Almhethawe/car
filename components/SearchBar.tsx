@@ -33,12 +33,12 @@ const SearchBar = () => {
     if (model) {
       searchParams.set("model", model);
     } else {
-      searchParams.delete("model", model);
+      searchParams.delete("model");
     }
     if (manufacturer) {
       searchParams.set("manufacturer", manufacturer);
     } else {
-      searchParams.delete("manufacturer", manufacturer);
+      searchParams.delete("manufacturer");
     }
 
     const newPathname = `${
@@ -68,7 +68,7 @@ const SearchBar = () => {
         <input
           type="text"
           name="model"
-          placeholder="Tiguan"
+          placeholder="Car model"
           value={model}
           onChange={e => setModel(e.target.value)}
           className="searchbar__input"
